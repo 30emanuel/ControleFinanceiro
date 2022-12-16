@@ -1,0 +1,16 @@
+table{
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    color: #303030;
+    background-color: white;
+}
+thead{
+    font-weight: bolder;
+    font-size: 17px;
+}
+tr, td{
+    display: flex;
+    justify-content: space-between;
+}

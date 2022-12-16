@@ -1,0 +1,18 @@
+*{
+    width: 400px; 
+    margin: 0 auto;
+}
+header{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+main{
+    max-width: 768px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-right: 10px;
+    padding-left: 10px;
+}

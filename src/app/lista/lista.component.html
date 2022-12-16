@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Tipo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <td *ngFor="let movimento of movimentos">
+            <tr>{{movimento.descricao}}</tr>
+            <tr>{{movimento.valor}}</tr>
+            <tr>{{movimento.tipo}}</tr>
+            <tr></tr>
+        </td>
+    </tbody>
+</table>
