@@ -17,7 +17,6 @@ export class FormComponent implements OnInit {
 
   adicionarMovimento(form: any, movimento: Movimento){
     if(form.valid){ 
-      console.log(movimento)
       this.controleService.addMovimento(movimento)
     }else{
       alert('Preencha todos os campos')

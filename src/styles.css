@@ -6,3 +6,6 @@ html{
     background-color: #303030;
     font-family: 'Roboto';
 }
+button{
+    cursor: pointer;
+}

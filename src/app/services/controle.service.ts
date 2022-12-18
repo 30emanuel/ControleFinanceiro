@@ -4,13 +4,12 @@ import { Movimento } from '../models/movimento.interface';
 @Injectable({
   providedIn: 'root'
 })
-export class ControleService {
+export class ControleService{
 
-  emitirMovimentoCriado = new EventEmitter<Movimento>()
+  emitirNovoMomento = new EventEmitter<Movimento>()
+  emitirMovimentoExcluido = new EventEmitter<Movimento>()
 
-  private movimentos: Movimento[] = [
-    {descricao: 'teste', valor: 4535345, tipo: 'entrada'}
-  ]
+  movimentos: Array<Movimento> = JSON.parse(localStorage.getItem("movimentos") || '[]')
 
   constructor() { }
 
@@ -19,7 +18,17 @@ export class ControleService {
   }
 
   addMovimento(movimento: Movimento){
-    this.emitirMovimentoCriado.emit(movimento)
+    this.emitirNovoMomento.emit(movimento)
+    this.setLocalStorage()
   }
 
+  deletarMovimento(movimento: Movimento, index: number){
+    this.movimentos.splice(index, 1)
+    this.emitirMovimentoExcluido.emit(movimento)
+    this.setLocalStorage()
+  }
+
+  setLocalStorage(){
+    localStorage.setItem("movimentos", JSON.stringify(this.movimentos))
+  }
 }

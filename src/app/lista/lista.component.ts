@@ -15,12 +15,13 @@ export class ListaComponent implements OnInit {
 
   ngOnInit(): void {
     this.movimentos = this.controleService.getMovimentos()
-    this.controleService.emitirMovimentoCriado.subscribe(
-      
-      movimento => {this.movimentos.push(movimento) 
-        console.log(this.movimentos)
-      console.log('teste')}
+    this.controleService.emitirNovoMomento.subscribe( 
+      movimento => this.movimentos.push(movimento) 
     )
+  }
+
+  deletarMovimento(movimento: Movimento, index: number){
+    this.controleService.deletarMovimento(movimento, index)
   }
 
 }

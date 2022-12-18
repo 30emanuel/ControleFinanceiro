@@ -8,11 +8,15 @@
         </tr>
     </thead>
     <tbody>
-        <td *ngFor="let movimento of movimentos">
+        <td *ngFor="let movimento of movimentos; let i = index">
             <tr>{{movimento.descricao}}</tr>
             <tr>{{movimento.valor}}</tr>
             <tr>{{movimento.tipo}}</tr>
-            <tr></tr>
+            <tr>
+                <button (click)="deletarMovimento(movimento, i)">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </tr>
         </td>
     </tbody>
 </table>
