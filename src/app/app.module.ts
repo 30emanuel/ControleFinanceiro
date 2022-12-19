@@ -15,6 +15,6 @@ import { DashboardModule } from './dashboard/dashboard/dashboard.module';
     DashboardModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

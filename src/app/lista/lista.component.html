@@ -19,5 +19,8 @@
                 </button>
             </tr>
         </td>
+        <div *ngIf="movimentos.length == 0">
+            <p>Nenhum movimento foi encontrado.</p>
+        </div>
     </tbody>
 </table>

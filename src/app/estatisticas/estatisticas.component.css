@@ -6,7 +6,7 @@ section{
 div{
     border-radius: 5px;
     background-color: white;
-    padding: 10px;
+    padding: 5px;
     width: 25%;
     font-weight: bolder;
     text-align: center;
@@ -22,4 +22,16 @@ p{
 }
 .fa-circle-down{
     color: red;
+}
+@media (max-width: 400px){
+    section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    div{
+        width: 90%;
+        margin-top: 10px;
+        height: 100%;
+    }
 }
