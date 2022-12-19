@@ -11,8 +11,11 @@ div{
     font-weight: bolder;
     text-align: center;
 }
-div h2{
+h2{
     font-size: 15px;
+}
+p{
+    word-wrap: break-word;
 }
 .fa-circle-up, .fa-dollar-sign{
     color: green;

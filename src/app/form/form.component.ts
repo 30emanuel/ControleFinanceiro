@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Movimento } from '../models/movimento.interface';
 import { ControleService } from '../services/controle.service';
 
 @Component({
@@ -15,9 +14,10 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  adicionarMovimento(form: any, movimento: Movimento){
+  adicionarMovimento(form: any){
     if(form.valid){ 
-      this.controleService.addMovimento(movimento)
+      this.controleService.addMovimento(form.value)
+      form.form.reset()
     }else{
       alert('Preencha todos os campos')
     }

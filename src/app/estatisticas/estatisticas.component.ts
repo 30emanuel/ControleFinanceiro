@@ -18,9 +18,7 @@ export class EstatisticasComponent implements OnInit {
   ngOnInit(): void {
     this.carregarMovimentos(this.controleService.getMovimentos())
     this.controleService.emitirNovoMomento.subscribe( 
-      movimento => {this.novoMovimento(movimento)
-        console.log(movimento)
-      }
+      movimento => this.novoMovimento(movimento)
     )
     this.controleService.emitirMovimentoExcluido.subscribe( 
       movimento => this.removerMovimento(movimento)

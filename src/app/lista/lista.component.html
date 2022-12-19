@@ -11,7 +11,8 @@
         <td *ngFor="let movimento of movimentos; let i = index">
             <tr>{{movimento.descricao}}</tr>
             <tr>{{movimento.valor}}</tr>
-            <tr>{{movimento.tipo}}</tr>
+            <tr *ngIf="movimento.tipo == 'entrada'"><i class="fa-solid fa-circle-up"></i></tr>
+            <tr *ngIf="movimento.tipo == 'saida'"><i class="fa-solid fa-circle-down"></i></tr>
             <tr>
                 <button (click)="deletarMovimento(movimento, i)">
                     <i class="fa-solid fa-trash"></i>

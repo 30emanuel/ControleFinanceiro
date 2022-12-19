@@ -4,17 +4,43 @@ form{
     color: #303030;
     background-color: white;
 }
-form div{
-    margin-top: 5px;
+form div, form button{
+    display: flex;
+    padding: 5px;
     justify-content: center;
     align-items: center;
 }
-.radio{
-    display: flex;
-    align-items: center;
-    text-align: center;
+.desc, .valor{
+    flex-direction: column;
+}
+.desc input, .valor input{
+    width: 160px;
+    margin-left: 10px;
+    border: 1px solid #303030;
+    border-radius: 4px;
+    padding: 0.5em;
+}
+label{
+    font-size: 17px;
 }
 .radio div{
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px
+}
+.radio input{
+    width: 16px;
+    height: 16px;
+    border: 1px solid gray;
+}
+button{
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    width: 70px;
+    height: 35px;
+    background-color: rgb(85, 207, 112);
+    font-weight: bolder;
+    transition: 0.5s;
+}
+button:hover{
+    background-color: rgb(48, 189, 79);
 }

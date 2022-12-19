@@ -1,14 +1,14 @@
 <section>
     <div>
         <h2>Total <i class="fa-solid fa-dollar-sign"></i></h2>
-        <p>R$ {{total}}</p>
+        <p>{{total | currency:'BRL':true}}</p>
     </div>
     <div>
         <h2>Entradas <i class="fa-solid fa-circle-up"></i></h2>
-        <p>R$ {{totalEntradas}}</p>
+        <p>{{totalEntradas | currency:'BRL':true}}</p>
     </div>
     <div>
         <h2>Saídas <i class="fa-solid fa-circle-down"></i></h2>
-        <p>R$ {{totalSaidas}}</p>
+        <p>{{totalSaidas | currency:'BRL':true}}</p>
     </div>
 </section>
