@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Movimento } from '../models/movimento.interface';
-import { ControleService } from '../services/controle.service';
+import { Movimento } from 'src/app/models/movimento.interface';
+import { ControleService } from 'src/app/services/controle.service';
 
 @Component({
   selector: 'app-lista',
@@ -15,13 +15,12 @@ export class ListaComponent implements OnInit {
 
   ngOnInit(): void {
     this.movimentos = this.controleService.getMovimentos()
-    this.controleService.emitirNovoMomento.subscribe( 
-      movimento => this.movimentos.push(movimento) 
+    this.controleService.emitirNovoMomento.subscribe(
+      movimento => this.movimentos.push(movimento)
     )
   }
 
   deletarMovimento(movimento: Movimento, index: number){
     this.controleService.deletarMovimento(movimento, index)
   }
-
 }

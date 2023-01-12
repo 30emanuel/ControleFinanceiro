@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './dashboard.component';
-import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ControleService } from 'src/app/services/controle.service';
-import { EstatisticasComponent } from 'src/app/estatisticas/estatisticas.component';
-import { FormComponent } from 'src/app/form/form.component';
-import { ListaComponent } from 'src/app/lista/lista.component';
+import { FormComponent } from './form/form.component';
+import { ListaComponent } from './lista/lista.component';
+import { EstatisticasComponent } from './estatisticas/estatisticas.component';
 
 
 
@@ -18,7 +18,7 @@ import { ListaComponent } from 'src/app/lista/lista.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   providers: [ControleService]
 })

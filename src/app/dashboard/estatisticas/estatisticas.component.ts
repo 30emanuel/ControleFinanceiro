@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Movimento } from '../models/movimento.interface';
-import { ControleService } from '../services/controle.service';
+import { Movimento } from 'src/app/models/movimento.interface';
+import { ControleService } from 'src/app/services/controle.service';
+
 
 @Component({
   selector: 'app-estatisticas',
@@ -17,10 +18,10 @@ export class EstatisticasComponent implements OnInit {
 
   ngOnInit(): void {
     this.carregarMovimentos(this.controleService.getMovimentos())
-    this.controleService.emitirNovoMomento.subscribe( 
+    this.controleService.emitirNovoMomento.subscribe(
       movimento => this.novoMovimento(movimento)
     )
-    this.controleService.emitirMovimentoExcluido.subscribe( 
+    this.controleService.emitirMovimentoExcluido.subscribe(
       movimento => this.removerMovimento(movimento)
     )
   }
